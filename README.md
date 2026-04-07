@@ -40,3 +40,4 @@ This project is deployed using GitHub Pages.
 - Add photos and more campus branding
 - Expand student resources
 - Improve search and filtering
+- Add campus photos to improve the visual design
