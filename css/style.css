@@ -1,0 +1,251 @@
+:root {
+  --navy: #12305b;
+  --burgundy: #7a153f;
+  --gold: #f2c230;
+  --cream: #f7f4ef;
+  --white: #ffffff;
+  --text: #1f1f1f;
+  --muted: #5a5a5a;
+  --border: rgba(18, 48, 91, 0.12);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Base page styling */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+main {
+  min-height: 70vh;
+}
+
+/* Header styling */
+.site-header {
+  background: linear-gradient(135deg, var(--navy) 0%, #1e4c86 100%);
+  color: var(--white);
+}
+
+.site-tag {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.header-badge {
+  background-color: var(--gold);
+  color: var(--navy);
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* Navigation styling */
+.main-nav {
+  background-color: var(--white);
+  border-bottom: 3px solid var(--gold);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.nav-brand {
+  color: var(--burgundy) !important;
+  font-weight: 700;
+}
+
+.main-nav .nav-link {
+  color: var(--navy) !important;
+  font-weight: 600;
+  margin-left: 0.5rem;
+  padding: 0.55rem 0.9rem !important;
+  border-radius: 999px;
+  transition: 0.2s ease;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link.active {
+  background-color: var(--burgundy);
+  color: var(--white) !important;
+}
+
+.custom-toggler {
+  border-color: rgba(18, 48, 91, 0.2);
+}
+
+/* Shared content areas */
+.hero-section {
+  background: linear-gradient(180deg, rgba(18, 48, 91, 0.06) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.content-section {
+  background-color: transparent;
+}
+
+.hero-copy,
+.info-panel,
+.app-card,
+.featured-event {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 1.6rem;
+  box-shadow: var(--shadow);
+}
+
+.section-label {
+  color: var(--burgundy);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-heading,
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--navy);
+}
+
+.panel-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.hero-text,
+.section-subtext,
+.app-card p,
+.info-panel p,
+.featured-event p,
+li,
+.tip-text {
+  color: var(--muted);
+}
+
+.section-header {
+  max-width: 700px;
+}
+
+.app-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+}
+
+.card-chip {
+  display: inline-block;
+  background-color: rgba(122, 21, 63, 0.1);
+  color: var(--burgundy);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+/* Button styles */
+.btn-gold {
+  background-color: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 1.15rem;
+}
+
+.btn-gold:hover {
+  background-color: var(--burgundy);
+  color: var(--white);
+}
+
+.btn-outline-theme {
+  background-color: transparent;
+  color: var(--burgundy);
+  font-weight: 700;
+  border: 2px solid rgba(122, 21, 63, 0.22);
+  border-radius: 999px;
+  padding: 0.75rem 1.15rem;
+}
+
+.btn-outline-theme:hover {
+  background-color: var(--burgundy);
+  color: var(--white);
+}
+
+/* Form styling */
+.form-select {
+  border-radius: 14px;
+  border: 1px solid rgba(18, 48, 91, 0.18);
+  padding: 0.85rem 1rem;
+}
+
+/* Weather box */
+#weather-output .weather-box {
+  background-color: rgba(18, 48, 91, 0.04);
+  border: 1px solid rgba(18, 48, 91, 0.08);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--navy);
+  color: var(--white);
+  margin-top: 2rem;
+}
+
+.site-footer p {
+  color: var(--white);
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+/* Responsive layout */
+@media (max-width: 991px) {
+  .site-title {
+    font-size: 1.9rem;
+  }
+
+  .hero-heading,
+  .section-heading {
+    font-size: 1.6rem;
+  }
+
+  .main-nav .nav-link {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 576px) {
+  .site-title {
+    font-size: 1.65rem;
+  }
+
+  .hero-heading,
+  .section-heading {
+    font-size: 1.35rem;
+  }
+
+  .hero-copy,
+  .info-panel,
+  .app-card,
+  .featured-event {
+    padding: 1.2rem;
+  }
+}

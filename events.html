@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What’s Happening | MMU Student Survival Hub</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container py-4 d-flex justify-content-between align-items-center flex-wrap gap-3">
+      <div>
+        <p class="site-tag mb-1">Campus Life Super App MVP</p>
+        <h1 class="site-title mb-0">MMU Student Survival Hub</h1>
+      </div>
+      <div class="header-badge">Events Page</div>
+    </div>
+  </header>
+
+  <!-- Main navigation -->
+  <nav class="navbar navbar-expand-lg main-nav">
+    <div class="container">
+      <a class="navbar-brand nav-brand" href="index.html">MMU Hub</a>
+
+      <button
+        class="navbar-toggler custom-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <div class="navbar-nav">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" aria-current="page" href="events.html">What’s Happening</a>
+          <a class="nav-link" href="dining.html">What’s Open</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Search and filter section -->
+    <section class="content-section">
+      <div class="container py-5">
+        <div class="info-panel">
+          <p class="section-label mb-1">Search + Filters</p>
+          <h2 class="section-heading">Find campus events faster.</h2>
+          <p class="section-subtext">Search events | Filter by type | Filter by date</p>
+
+          <div class="d-flex flex-wrap gap-2 mt-3">
+            <button id="all-events-btn" class="btn btn-gold">All</button>
+            <button id="clubs-btn" class="btn btn-outline-theme">Clubs</button>
+            <button id="sports-btn" class="btn btn-outline-theme">Sports</button>
+            <button id="social-btn" class="btn btn-outline-theme">Social</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured event section -->
+    <section class="content-section pt-0">
+      <div class="container pb-5">
+        <div class="featured-event">
+          <p class="section-label mb-1">Featured Event</p>
+          <h2 class="section-heading">Student Leadership Mixer</h2>
+          <p class="section-subtext">
+            Thursday at 5:30 PM | Alumnae Hall | Meet student leaders, campus groups, and new people.
+          </p>
+          <button id="learn-more-btn" class="btn btn-gold">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming events list -->
+    <section class="content-section pt-0">
+      <div class="container pb-5">
+        <div class="section-header mb-4">
+          <p class="section-label mb-1">Upcoming Events List</p>
+          <h2 class="section-heading">What’s coming up on campus.</h2>
+          <p class="section-subtext mb-0">Use the buttons above to filter categories.</p>
+        </div>
+
+        <div class="row g-4" id="events-container">
+          <div class="col-md-4 event-item" data-category="clubs">
+            <article class="app-card h-100">
+              <span class="card-chip">Clubs</span>
+              <h3>WiCyS Meet Up</h3>
+              <p>Networking and conversation for students interested in cybersecurity.</p>
+              <button class="btn btn-gold event-detail-btn" data-event="WiCyS Meet Up">View Event</button>
+            </article>
+          </div>
+
+          <div class="col-md-4 event-item" data-category="sports">
+            <article class="app-card h-100">
+              <span class="card-chip">Sports</span>
+              <h3>Flag Football Interest Workout</h3>
+              <p>Beginner-friendly workout session for students interested in joining.</p>
+              <button class="btn btn-gold event-detail-btn" data-event="Flag Football Interest Workout">View Event</button>
+            </article>
+          </div>
+
+          <div class="col-md-4 event-item" data-category="social">
+            <article class="app-card h-100">
+              <span class="card-chip">Social</span>
+              <h3>Late Night Student Social</h3>
+              <p>A campus hangout event with music, snacks, and student activities.</p>
+              <button class="btn btn-gold event-detail-btn" data-event="Late Night Student Social">View Event</button>
+            </article>
+          </div>
+        </div>
+
+        <!-- Event detail output -->
+        <div class="info-panel mt-4">
+          <p class="section-label mb-1">Event Details</p>
+          <h3 class="panel-heading">Selected event</h3>
+          <p id="event-detail-output" class="mb-0">
+            Click “Learn More” or a “View Event” button to see details here.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container py-4 d-flex justify-content-between flex-wrap gap-2">
+      <p class="mb-0">MMU Student Survival Hub</p>
+      <p class="mb-0">Campus Links | Contact | Socials</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
