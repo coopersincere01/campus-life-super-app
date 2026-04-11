@@ -1,10 +1,10 @@
 # MMU Student Survival Hub
 
 ## Project Description
-MMU Student Survival Hub is a Campus Life Super App MVP designed to help students quickly check campus events, dining information, and daily updates in one place.
+MMU Student Survival Hub is a Campus Life Super App built to make student life easier by keeping important campus information in one place.
 
 ## Purpose
-The purpose of this project is to create a student-centered web app that makes campus life easier by combining useful features into one simple interface.
+The purpose of this project is to give students a simple way to check campus events, dining information, and live updates without needing to jump between multiple pages or systems.
 
 ## Technologies Used
 - HTML
@@ -12,32 +12,38 @@ The purpose of this project is to create a student-centered web app that makes c
 - Bootstrap
 - JavaScript
 - Open-Meteo API
+- Quotable API
 - GitHub Pages
 
 ## Features
-- Multi-page website with internal navigation
-- Home dashboard with quick access cards
+- Multi-page website with connected navigation
+- Home page with quick access cards
 - Events page with filter buttons and event detail output
-- Dining page with dining hours, dining locations, and meal preview buttons
-- Live weather API integration on the home page
-- Responsive layout for different screen sizes
+- Dining page with dining locations, hours, and meal preview buttons
+- Live Milwaukee weather section
+- Live quote section
+- Responsive layout for desktop, tablet, and mobile
+- Real campus images and accessible alt text
+
+## Setup and Deployment
+1. Clone the repository from GitHub
+2. Open the project folder in VS Code
+3. Run the files with Live Server or open the HTML files in a browser
+4. Push updates to GitHub
+5. Deploy the site through GitHub Pages using the main branch
 
 ## How to Use
-1. Open the home page
-2. Use the navigation bar to move between pages
-3. Click the student tip button on the home page
-4. Click the weather button to load live weather data
-5. Use the event filter buttons on the events page
-6. Click Learn More or View Event to show event details
-7. Use the dining meal buttons and dining selector on the dining page
-
-## Deployment
-This project is deployed using GitHub Pages.
+- Open the Home page to view quick campus information
+- Use the navigation bar to move between pages
+- Click the weather button to load live weather
+- Click the quote button to load a new quote
+- Use the event filter buttons to sort event types
+- Click the event buttons to read event details
+- Use the dining selector and meal buttons on the dining page
 
 ## Future Improvements
 - Add real campus event data
-- Add real dining menu integration
-- Add photos and more campus branding
-- Expand student resources
-- Improve search and filtering
-- Add campus photos to improve the visual design
+- Add a live dining menu API
+- Add a study spots page
+- Add a search bar for events
+- Add more campus images and student resource tools

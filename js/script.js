@@ -1,4 +1,3 @@
-// Home page student tip button
 const tipBtn = document.getElementById("tip-btn");
 const tipText = document.getElementById("tip-text");
 
@@ -9,7 +8,6 @@ if (tipBtn && tipText) {
   });
 }
 
-// Home page weather API button
 const loadWeatherBtn = document.getElementById("load-weather-btn");
 const weatherOutput = document.getElementById("weather-output");
 
@@ -24,28 +22,26 @@ if (loadWeatherBtn && weatherOutput) {
 
       const data = await response.json();
       const current = data.current;
-
-      // Convert Celsius to Fahrenheit so it is easier to read
       const tempC = current.temperature_2m;
       const tempF = (tempC * 9) / 5 + 32;
+      const windKmh = current.wind_speed_10m;
+      const windMph = windKmh * 0.621371;
 
       weatherOutput.innerHTML = `
         <div class="weather-box">
           <h3 class="panel-heading">Current Milwaukee Weather</h3>
           <p class="mb-2"><strong>Temperature:</strong> ${tempF.toFixed(1)}°F</p>
-          <p class="mb-2"><strong>Wind Speed:</strong> ${current.wind_speed_10m} km/h</p>
+          <p class="mb-2"><strong>Wind Speed:</strong> ${windMph.toFixed(1)} mph</p>
           <p class="mb-0">Live weather data loaded through the API.</p>
         </div>
       `;
     } catch (error) {
-      weatherOutput.innerHTML =
-        "<p>Weather could not be loaded right now.</p>";
+      weatherOutput.innerHTML = "<p>Weather could not be loaded right now.</p>";
       console.error("Weather API error:", error);
     }
   });
 }
 
-// Events page filter buttons
 const allEventsBtn = document.getElementById("all-events-btn");
 const clubsBtn = document.getElementById("clubs-btn");
 const sportsBtn = document.getElementById("sports-btn");
@@ -78,7 +74,6 @@ if (socialBtn) {
   socialBtn.addEventListener("click", () => filterEvents("social"));
 }
 
-// Events page learn more button
 const learnMoreBtn = document.getElementById("learn-more-btn");
 const eventDetailOutput = document.getElementById("event-detail-output");
 
@@ -89,7 +84,6 @@ if (learnMoreBtn && eventDetailOutput) {
   });
 }
 
-// Events page individual event buttons
 const eventDetailButtons = document.querySelectorAll(".event-detail-btn");
 
 eventDetailButtons.forEach((button) => {
@@ -111,7 +105,6 @@ eventDetailButtons.forEach((button) => {
   });
 });
 
-// Dining page meal buttons
 const breakfastBtn = document.getElementById("breakfast-btn");
 const lunchBtn = document.getElementById("lunch-btn");
 const dinnerBtn = document.getElementById("dinner-btn");
@@ -134,19 +127,18 @@ if (breakfastBtn && lunchBtn && dinnerBtn && menuDisplay) {
   });
 }
 
-// Dining location selector
 const hallSelect = document.getElementById("hall-select");
 const hallDescription = document.getElementById("hall-description");
 
 if (hallSelect && hallDescription) {
   hallSelect.addEventListener("change", () => {
-    if (hallSelect.value === "Alumnae Dining Room") {
+    if (hallSelect.value === "alumnae") {
       hallDescription.textContent =
         "The Alumnae Dining Room is the main dining space with flexible meal options and variety.";
-    } else if (hallSelect.value === "Cyber Café") {
+    } else if (hallSelect.value === "cyber") {
       hallDescription.textContent =
-        "The Cyber Café is a good quick option for sandwiches, salads, coffee, and baked treats.";
-    } else if (hallSelect.value === "Vending Machines") {
+        "The Cyber Café is a quick campus option for sandwiches, salads, coffee, and baked treats.";
+    } else if (hallSelect.value === "vending") {
       hallDescription.textContent =
         "Campus vending machines offer grab-and-go snacks, drinks, and lighter meal options.";
     }
