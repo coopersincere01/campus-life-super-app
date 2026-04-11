@@ -13,7 +13,7 @@ const weatherOutput = document.getElementById("weather-output");
 
 if (loadWeatherBtn && weatherOutput) {
   loadWeatherBtn.addEventListener("click", async () => {
-    weatherOutput.innerHTML = "<p>Loading weather...</p>";
+    weatherOutput.innerHTML = "<p>Loading current weather...</p>";
 
     try {
       const response = await fetch(
