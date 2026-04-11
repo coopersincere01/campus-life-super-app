@@ -12,16 +12,14 @@ The purpose of this project is to give students a simple way to check campus eve
 - Bootstrap
 - JavaScript
 - Open-Meteo API
-- Quotable API
 - GitHub Pages
 
 ## Features
 - Multi-page website with connected navigation
 - Home page with quick access cards
 - Events page with filter buttons and event detail output
-- Dining page with dining locations, hours, and meal preview buttons
+- Dining page with dining locations, hours, meal preview buttons, and dining selector
 - Live Milwaukee weather section
-- Live quote section
 - Responsive layout for desktop, tablet, and mobile
 - Real campus images and accessible alt text
 
@@ -36,7 +34,6 @@ The purpose of this project is to give students a simple way to check campus eve
 - Open the Home page to view quick campus information
 - Use the navigation bar to move between pages
 - Click the weather button to load live weather
-- Click the quote button to load a new quote
 - Use the event filter buttons to sort event types
 - Click the event buttons to read event details
 - Use the dining selector and meal buttons on the dining page
