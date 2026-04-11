@@ -26,6 +26,7 @@ main {
   position: absolute;
   left: -9999px;
   top: auto;
+  text-decoration: none;
 }
 
 .skip-link:focus {
@@ -201,6 +202,7 @@ li,
   border-radius: 14px;
   border: 1px solid rgba(18, 48, 91, 0.18);
   padding: 0.85rem 1rem;
+  background-color: var(--white);
 }
 
 .feature-image,
@@ -224,6 +226,7 @@ li,
   background-color: var(--navy);
   color: var(--white);
   margin-top: 2rem;
+  padding-top: 0.25rem;
 }
 
 .site-footer p {
