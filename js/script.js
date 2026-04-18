@@ -1,3 +1,4 @@
+// Home page: show a quick student tip when the button is clicked
 const tipBtn = document.getElementById("tip-btn");
 const tipText = document.getElementById("tip-text");
 
@@ -8,6 +9,7 @@ if (tipBtn && tipText) {
   });
 }
 
+// Home page: load live Milwaukee weather from the Open-Meteo API
 const loadWeatherBtn = document.getElementById("load-weather-btn");
 const weatherOutput = document.getElementById("weather-output");
 
@@ -20,8 +22,19 @@ if (loadWeatherBtn && weatherOutput) {
         "https://api.open-meteo.com/v1/forecast?latitude=43.0500&longitude=-87.9500&current=temperature_2m,wind_speed_10m"
       );
 
+      // Stop if the API request fails
+      if (!response.ok) {
+        throw new Error("Weather request failed.");
+      }
+
       const data = await response.json();
       const current = data.current;
+
+      // Make sure current weather data actually exists
+      if (!current) {
+        throw new Error("Weather data is missing.");
+      }
+
       const tempC = current.temperature_2m;
       const tempF = (tempC * 9) / 5 + 32;
       const windKmh = current.wind_speed_10m;
@@ -36,12 +49,14 @@ if (loadWeatherBtn && weatherOutput) {
         </div>
       `;
     } catch (error) {
-      weatherOutput.innerHTML = "<p>Weather could not be loaded right now.</p>";
+      weatherOutput.innerHTML =
+        "<p>Weather could not be loaded right now. Please try again later.</p>";
       console.error("Weather API error:", error);
     }
   });
 }
 
+// Events page: filter event cards by category
 const allEventsBtn = document.getElementById("all-events-btn");
 const clubsBtn = document.getElementById("clubs-btn");
 const sportsBtn = document.getElementById("sports-btn");
@@ -74,6 +89,7 @@ if (socialBtn) {
   socialBtn.addEventListener("click", () => filterEvents("social"));
 }
 
+// Events page: featured event details
 const learnMoreBtn = document.getElementById("learn-more-btn");
 const eventDetailOutput = document.getElementById("event-detail-output");
 
@@ -84,27 +100,29 @@ if (learnMoreBtn && eventDetailOutput) {
   });
 }
 
+// Events page: show details for selected event cards
 const eventDetailButtons = document.querySelectorAll(".event-detail-btn");
 
 eventDetailButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const eventName = button.dataset.event;
 
-    if (eventDetailOutput) {
-      if (eventName === "WiCyS Meet Up") {
-        eventDetailOutput.textContent =
-          "WiCyS Meet Up: A student networking event for people interested in cybersecurity, leadership, and building community in tech.";
-      } else if (eventName === "Flag Football Interest Workout") {
-        eventDetailOutput.textContent =
-          "Flag Football Interest Workout: A beginner-friendly workout and interest session for students wanting to get involved before the season starts.";
-      } else if (eventName === "Late Night Student Social") {
-        eventDetailOutput.textContent =
-          "Late Night Student Social: A campus social event with snacks, music, and activities designed to help students relax and connect.";
-      }
+    if (!eventDetailOutput) return;
+
+    if (eventName === "WiCyS Meet Up") {
+      eventDetailOutput.textContent =
+        "WiCyS Meet Up: A student networking event for people interested in cybersecurity, leadership, and building community in tech.";
+    } else if (eventName === "Flag Football Interest Workout") {
+      eventDetailOutput.textContent =
+        "Flag Football Interest Workout: A beginner-friendly workout and interest session for students wanting to get involved before the season starts.";
+    } else if (eventName === "Late Night Student Social") {
+      eventDetailOutput.textContent =
+        "Late Night Student Social: A campus social event with snacks, music, and activities designed to help students relax and connect.";
     }
   });
 });
 
+// Dining page: switch meal preview text
 const breakfastBtn = document.getElementById("breakfast-btn");
 const lunchBtn = document.getElementById("lunch-btn");
 const dinnerBtn = document.getElementById("dinner-btn");
@@ -127,6 +145,7 @@ if (breakfastBtn && lunchBtn && dinnerBtn && menuDisplay) {
   });
 }
 
+// Dining page: update description based on selected dining location
 const hallSelect = document.getElementById("hall-select");
 const hallDescription = document.getElementById("hall-description");
 

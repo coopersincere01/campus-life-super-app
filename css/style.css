@@ -1,4 +1,12 @@
+/* =========================================================
+   MMU Student Survival Hub
+   Main project stylesheet
+   This file handles colors, layout, shared cards, buttons,
+   accessibility focus states, and responsive adjustments.
+   ========================================================= */
+
 :root {
+  /* Brand color palette */
   --navy: #12305b;
   --burgundy: #7a153f;
   --gold: #f2c230;
@@ -10,6 +18,7 @@
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
+/* Base page styling */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -18,10 +27,12 @@ body {
   line-height: 1.6;
 }
 
+/* Makes sure shorter pages still fill most of the viewport */
 main {
   min-height: 70vh;
 }
 
+/* Skip link is hidden until focused for keyboard accessibility */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -40,6 +51,7 @@ main {
   font-weight: 700;
 }
 
+/* Header styling */
 .site-header {
   background: linear-gradient(135deg, var(--navy) 0%, #1e4c86 100%);
   color: var(--white);
@@ -66,6 +78,7 @@ main {
   font-weight: 700;
 }
 
+/* Navigation styling */
 .main-nav {
   background-color: var(--white);
   border-bottom: 3px solid var(--gold);
@@ -96,6 +109,7 @@ main {
   border-color: rgba(18, 48, 91, 0.2);
 }
 
+/* Main content sections */
 .hero-section {
   background: linear-gradient(180deg, rgba(18, 48, 91, 0.06) 0%, rgba(255, 255, 255, 0) 100%);
 }
@@ -104,6 +118,7 @@ main {
   background-color: transparent;
 }
 
+/* Shared card and panel styling used across pages */
 .hero-copy,
 .info-panel,
 .app-card,
@@ -116,6 +131,7 @@ main {
   box-shadow: var(--shadow);
 }
 
+/* Section labels and headings */
 .section-label {
   color: var(--burgundy);
   font-size: 0.82rem;
@@ -138,6 +154,7 @@ main {
   color: var(--navy);
 }
 
+/* Paragraph and helper text styling */
 .hero-text,
 .section-subtext,
 .app-card p,
@@ -159,6 +176,7 @@ li,
   margin-bottom: 0.75rem;
 }
 
+/* Small badge label used on cards */
 .card-chip {
   display: inline-block;
   background-color: rgba(122, 21, 63, 0.1);
@@ -170,6 +188,7 @@ li,
   margin-bottom: 1rem;
 }
 
+/* Main gold call-to-action button */
 .btn-gold {
   background-color: var(--gold);
   color: var(--navy);
@@ -184,6 +203,7 @@ li,
   color: var(--white);
 }
 
+/* Outline button used for secondary actions */
 .btn-outline-theme {
   background-color: transparent;
   color: var(--burgundy);
@@ -198,6 +218,7 @@ li,
   color: var(--white);
 }
 
+/* Form select styling */
 .form-select {
   border-radius: 14px;
   border: 1px solid rgba(18, 48, 91, 0.18);
@@ -205,6 +226,7 @@ li,
   background-color: var(--white);
 }
 
+/* Shared image sizing */
 .feature-image,
 .event-image {
   width: 100%;
@@ -214,6 +236,7 @@ li,
   display: block;
 }
 
+/* Output boxes for weather and other text areas */
 #weather-output .weather-box,
 #quote-output .weather-box {
   background-color: rgba(18, 48, 91, 0.04);
@@ -222,6 +245,7 @@ li,
   padding: 1rem;
 }
 
+/* Footer styling */
 .site-footer {
   background-color: var(--navy);
   color: var(--white);
@@ -233,10 +257,12 @@ li,
   color: var(--white);
 }
 
+/* List spacing */
 ul {
   padding-left: 1.2rem;
 }
 
+/* Keyboard focus styling for accessibility */
 a:focus-visible,
 button:focus-visible,
 select:focus-visible {
@@ -244,6 +270,7 @@ select:focus-visible {
   outline-offset: 3px;
 }
 
+/* Tablet and medium screen adjustments */
 @media (max-width: 991px) {
   .site-title {
     font-size: 1.9rem;
@@ -261,6 +288,7 @@ select:focus-visible {
   }
 }
 
+/* Mobile screen adjustments */
 @media (max-width: 576px) {
   .site-title {
     font-size: 1.65rem;
